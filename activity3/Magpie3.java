@@ -1,3 +1,5 @@
+package activity3;
+
 /**
  * A program to carry on conversations with a human user.
  * This version: 
