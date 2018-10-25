@@ -1,0 +1,44 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files (x86)\Java\jdk1.8.0_101\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+C:\Program Files (x86)\BlueJ\lib\bluejcore.jar;C:\Program Files (x86)\BlueJ\lib\junit-4.8.2.jar;H:\APCS\Projects\+libs\TGLib113.jar;H:\APCS\Projects
+-d
+H:\APCS\Projects\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+C:\Program Files (x86)\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+H:\APCS\Projects\MazeWalker.java
+<---- end of javadoc command ---->
+Loading source file H:\APCS\Projects\MazeWalker.java...
+Constructing Javadoc information...
+Standard Doclet version 1.8.0_101
+Building tree for all the packages and classes...
+Generating H:\APCS\Projects\doc\MazeWalker.html...
+H:\APCS\Projects\MazeWalker.java:8: warning - @Ziggy is an unknown tag.
+H:\APCS\Projects\MazeWalker.java:8: warning - @Project is an unknown tag.
+Generating H:\APCS\Projects\doc\package-frame.html...
+Generating H:\APCS\Projects\doc\package-summary.html...
+Generating H:\APCS\Projects\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating H:\APCS\Projects\doc\allclasses-frame.html...
+Generating H:\APCS\Projects\doc\allclasses-noframe.html...
+Generating H:\APCS\Projects\doc\index.html...
+Generating H:\APCS\Projects\doc\stylesheet.css...
+2 warnings
