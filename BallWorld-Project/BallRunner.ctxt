@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=BallRunner
+comment0.text=\r\n\ Eventually\ a\ bunch\ of\ balls\ interacting\ on\ the\ screen\r\n\r\n\ @Ziggy\ Sheynin\r\n\ @Project\ Ball\ World\ -\ 914\r\n
+comment1.params=
+comment1.target=void\ activity2()
+comment1.text=\r\n\r\n\ \ \ \ public\ static\ void\ activity1\ ()\ {\r\n\ \ \ \ BallWorld\ ballWorld\ \=\ new\ BallWorld\ (400,400);\r\n\ \ \ \ TGPoint\ startPoint\ \=\ new\ TGPoint(0,0);\r\n\ \ \ \ //int\ startPoint\ \=\ 0;\r\n\ \ \ \ int\ startHeading\ \=\ 0;\r\n\ \ \ \ int\ radius\ \=\ 25;\r\n\ \ \ \ BallBot\ ballBot\ \=\ new\ BallBot(ballWorld,startPoint,startHeading,radius);\r\n\ \ \ \ while\ (2\ \=\=\ 2){\r\n\ \ \ \ if\ (ballBot.canMoveForward(ballWorld)\ \=\=\ true){\r\n\ \ \ \ ballBot.moveForward();\r\n\ \ \ \ }else{\r\n\ \ \ \ startHeading\ \=\ (startHeading\ +\ 90)\ %\ 360;\r\n\ \ \ \ ballBot.setHeading(startHeading);\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n
+comment2.params=ballBotArray
+comment2.target=int\ findFreeBallBotIndex(BallBot[])
+comment3.params=point1\ point2
+comment3.target=double\ distanceBetweenPoints(TGPoint,\ TGPoint)
+comment4.params=ballBotArray\ entrancePoint
+comment4.target=boolean\ entranceClear(BallBot[],\ TGPoint)
+comment5.params=ballBot\ ballBotArray
+comment5.target=BallBot\ ballBotToBounceOff(BallBot,\ BallBot[])
+numComments=6

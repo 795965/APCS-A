@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=BallRunner
+comment0.text=\r\n\ Eventually\ a\ bunch\ of\ balls\ interacting\ on\ the\ screen\r\n\r\n\ @Ziggy\ Sheynin\r\n\ @Project\ Ball\ World\ -\ 914\r\n
+comment1.params=
+comment1.target=void\ run()
+comment2.params=ballWorld\ startPoint\ startHeading\ radius
+comment2.target=void\ BallBot(BallWorld,\ TGPoint,\ double,\ int)
+numComments=3
