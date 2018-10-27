@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+I find <N>television</> very educating. Every time somebody turns on the set, I go into the other room and <t>read</> a <N>book</>
+
+=======
+I find <N>television</> very educating. Every time somebody turns on the set, I go into the other room and <t>read</> a <N>book</>
+
+>>>>>>> b6744ff88e1fd0296a04e6ecdd8611ac8e6f2dbc

@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=SentenceBuilder
+comment0.text=\n\ Makes\ arrays\ of\ Strings\ to\ build\ sentences\n\ \n\ @Ziggy\ Sheynin\n\ @Lab\ 1005\ Sentence\ Builder\n
+comment1.params=
+comment1.target=void\ loadSentences()
+comment10.params=
+comment10.target=java.lang.String\ getVerbPhrase()
+comment11.params=
+comment11.target=java.lang.String\ getPrepositionalPhrase()
+comment2.params=
+comment2.target=java.lang.String\ getSentence()
+comment3.params=nouns
+comment3.target=java.lang.String\ getRandomNoun(java.lang.String[])
+comment4.params=verbs
+comment4.target=java.lang.String\ getRandomVerb(java.lang.String[])
+comment5.params=adjectives
+comment5.target=java.lang.String\ getRandomAdjective(java.lang.String[])
+comment6.params=adverbs
+comment6.target=java.lang.String\ getRandomAdverb(java.lang.String[])
+comment7.params=determiners
+comment7.target=java.lang.String\ getRandomDeterminer(java.lang.String[])
+comment8.params=prepositions
+comment8.target=java.lang.String\ getRandomPreposition(java.lang.String[])
+comment9.params=
+comment9.target=java.lang.String\ getNounPhrase()
+numComments=12

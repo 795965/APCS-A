@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+I find <N/> very educating. Every time somebody <t/> the <N/>, I go into the other <N/> and <t/> a book.
+
+=======
+I find <N/> very educating. Every time somebody <t/> the <N/>, I go into the other <N/> and <t/> a book.
+
+>>>>>>> b6744ff88e1fd0296a04e6ecdd8611ac8e6f2dbc

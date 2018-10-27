@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SimpleCalc()
+comment1.params=x\ y
+comment1.target=double\ add(int,\ int)
+comment2.params=x\ y
+comment2.target=double\ subtract(int,\ int)
+comment3.params=x\ y
+comment3.target=double\ multiply(int,\ int)
+comment4.params=x\ y
+comment4.target=double\ mudulodivide(int,\ int)
+comment5.params=x\ y
+comment5.target=double\ divide(int,\ int)
+numComments=6

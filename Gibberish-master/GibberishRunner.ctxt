@@ -1,0 +1,21 @@
+<<<<<<< HEAD
+#BlueJ class context
+comment0.target=GibberishRunner
+comment0.text=\r\n\ Creates\ a\ Madlibs\ kind\ of\ thing\r\n\r\n\ @Ziggy\ Sheynin\r\n\ @Gibberish\ Lab\ 1011\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=
+comment2.target=GibberishRunner()
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ GibberishRunner\r\n
+numComments=3
+=======
+#BlueJ class context
+comment0.target=GibberishRunner
+comment0.text=\r\n\ Creates\ a\ Madlibs\ kind\ of\ thing\r\n\r\n\ @Ziggy\ Sheynin\r\n\ @Gibberish\ Lab\ 1011\r\n
+comment1.params=
+comment1.target=void\ main()
+comment2.params=
+comment2.target=GibberishRunner()
+comment2.text=\r\n\ Constructor\ for\ objects\ of\ class\ GibberishRunner\r\n
+numComments=3
+>>>>>>> b6744ff88e1fd0296a04e6ecdd8611ac8e6f2dbc
