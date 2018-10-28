@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Student
+comment1.params=
+comment1.target=Student()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Student\n
+comment2.params=
+comment2.target=java.lang.String\ getfullName()
+comment2.text=\n\ Student\ Methods\n
+comment3.params=
+comment3.target=double\ getgpa()
+comment4.params=
+comment4.target=double\ getstuNumber()
+comment5.params=
+comment5.target=java.lang.String\ setfirstName()
+comment6.params=
+comment6.target=java.lang.String\ setmiddleName()
+comment7.params=
+comment7.target=java.lang.String\ setlastName()
+comment8.params=
+comment8.target=double\ setgpa()
+comment9.params=
+comment9.target=double\ setstuNumber()
+numComments=10
