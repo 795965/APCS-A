@@ -11,8 +11,7 @@ public class StudentRunner
 {
   public static void main (){
       Scanner scr = new Scanner(System.in);
-      
-      System.out.println(Student.firstName);
+      System.out.print(Student.Student);
       
       
 

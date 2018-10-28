@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.target=Student
-comment1.params=
-comment1.target=Student()
+comment1.params=fullName\ stuNumber\ gpa
+comment1.target=Student(java.lang.String,\ int,\ double)
 comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Student\n
 comment2.params=
 comment2.target=java.lang.String\ getfullName()
@@ -9,7 +9,7 @@ comment2.text=\n\ Student\ Methods\n
 comment3.params=
 comment3.target=double\ getgpa()
 comment4.params=
-comment4.target=double\ getstuNumber()
+comment4.target=int\ getstuNumber()
 comment5.params=
 comment5.target=java.lang.String\ setfirstName()
 comment6.params=
@@ -19,5 +19,5 @@ comment7.target=java.lang.String\ setlastName()
 comment8.params=
 comment8.target=double\ setgpa()
 comment9.params=
-comment9.target=double\ setstuNumber()
+comment9.target=int\ setstuNumber()
 numComments=10

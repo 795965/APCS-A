@@ -22,13 +22,13 @@ public class Student extends StudentRunner
     /**
      * Constructor for objects of class Student
      */
-    public Student()
+    public Student(String fullName, int stuNumber, double gpa)
     {
         // initialise instance variables-- default Student
         firstName = "Jimmy";
         middleName = "Jim";
         lastName = "Smith";
-        stuNumber = 0;
+        stuNumber = 0000000;
         gpa = 0.0;
     }
 
@@ -36,27 +36,36 @@ public class Student extends StudentRunner
      * Student Methods
      */
     public String getfullName(){
+        //method should get the names of Students in format last name, firstName middleName
         return lastName + "," + firstName + middleName;
     }
     public double getgpa(){
+        //gets the student's gpa
         return gpa;
     }
-    public double getstuNumber(){
+    public int getstuNumber(){
+        //gets the student number
         return stuNumber;
     }
     public String setfirstName(){
+        //creates the first name
         return firstName;
     }
     public String setmiddleName(){
+        //creates the middle name
         return middleName;
     }
     public String setlastName(){
+        //creates the last name
         return lastName;
     }
+    
     public double setgpa(){
+        //creates the gpa
         return gpa;
     }
-    public double setstuNumber(){
+    public int setstuNumber(){
+        //creates the gpa
         return stuNumber;
     }
 }
