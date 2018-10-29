@@ -2,4 +2,6 @@
 comment0.target=StudentRunner
 comment1.params=
 comment1.target=void\ main()
-numComments=2
+comment2.params=
+comment2.target=int\ menuNumber()
+numComments=3
