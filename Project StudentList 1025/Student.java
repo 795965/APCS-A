@@ -41,7 +41,11 @@ public class Student{
         //method should get the names of Students in format last name, firstName middleName
         return lastName + "," + firstName + " " + middleName;
     }
-
+    
+    public String getLastName(){
+        return lastName;
+    }
+    
     public double getgpa(){
         //gets the student's gpa
         return gpa;
