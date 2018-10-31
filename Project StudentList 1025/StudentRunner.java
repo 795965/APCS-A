@@ -10,8 +10,27 @@ import java.util.Scanner;
 public class StudentRunner
 {
     public static void main(){
-        StudentList studentList = new StudentList(); //methos to run arraylist (actually)
+        boolean done = false; //starts unfinished
+        StudentList studentList = new StudentList(); //method to run arraylist (actually)
+        while(done == false){ //when the code is unfinished- run loop
+            int demand = menuNumber();
+            if(demand == 7){
+                done = true; //when the user types a 7, the program finishes
+            } else if(demand == 1){ //the user wants to add a student
+                Scanner demand1 = new Scanner(System.in);
+                System.out.println("Enter Student Name: "); //if they press 1, the code give this instruction
+                String name = demand1.nextLine();
+                System.out.println("Enter Student Number: ");
+                int number = demand1.nextInt();
+                System.out.println("Enter Student GPA: ");
+                double GPA = demand1.nextDouble();
+                studentList.addStudentList(name, number, GPA);
+                System.out.println("Student Added.");
+                System.out.println();
 
+            }
+
+        }
     }
 
     public static int menuNumber(){ //creates a menu for the user to put add, remove, and edit students

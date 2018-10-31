@@ -64,5 +64,42 @@ public class StudentList {
             System.out.println("Your list is empty");
         }
     }
+
+    public void parseUserInput(Student s1, String name) {
+        int comma = name.indexOf(","); 
+        int space = name.indexOf (" "); 
+        if (comma == -1 && findSpace(name) == 1){ // if no comma and two spaces -> First middle last
+           s1.setFirstName(name.substring(0, space));
+           s1.setMiddleName(null);
+           s1.setlastName(name.substring(name.indexOf(" ", space +1) +1));
+        }else if (comma != -1 && findSpace(name) == 1){ // if comma and one space -> last, first
+            s1.setFirstName(name.substring(comma +1, name.indexOf(" ", comma +2)));
+            s1.setMiddleName(name.substring(name.indexOf(" ", comma +2)+1));
+            s1.setlastName(name.substring(0, comma));
+        } else if (comma != -1 && findSpace(name) == 2 || findSpace(name) == 1 ) { // if comma and two spaces -> last, first middle
+            s1.setFirstName(name.substring(0, comma));
+            s1.setMiddleName(name.substring(space +1, name.indexOf(" ", space +1)));
+            s1.setlastName(name.substring(name.indexOf(" ", space +1) +1));
+        } else{
+            s1.setFirstName(null);
+            s1.setMiddleName(null);
+            s1.setlastName(null);
+
+        }
+    }
+
+    public int findSpace(String name){
+        String changeName = name.toLowerCase();
+        int count = 0;
+        for (int i = 0; i < (changeName.length() -1); i++){
+            if (changeName.substring(i, i+1).equals(" ")){
+                count ++;
+            }
+        }
+        if(changeName.substring(changeName.length() -1).equals(changeName)){
+            count++;
+        }
+        return count;
+    }
 }
 

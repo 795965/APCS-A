@@ -1,16 +1,16 @@
 #BlueJ class context
 comment0.target=Student
-comment0.text=\n\ Makes\ Student\ Objects\n\n\ @author\ (Ziggy\ Sheynin)\n\ @version\ (Project\ 1025)\n
-comment1.params=first
+comment0.text=\r\n\ Makes\ Student\ Objects\r\n\r\n\ @author\ (Ziggy\ Sheynin)\r\n\ @version\ (Project\ 1025)\r\n
+comment1.params=name
 comment1.target=void\ setFirstName(java.lang.String)
-comment2.params=middle
+comment2.params=name
 comment2.target=void\ setMiddleName(java.lang.String)
-comment3.params=last
+comment3.params=name
 comment3.target=void\ setlastName(java.lang.String)
-comment4.params=number
-comment4.target=void\ setstuNumber(int)
-comment5.params=GPA
-comment5.target=void\ setgpa(double)
+comment4.params=GPA
+comment4.target=void\ setgpa(double)
+comment5.params=number
+comment5.target=void\ setstuNumber(int)
 comment6.params=
 comment6.target=java.lang.String\ getfullName()
 comment7.params=

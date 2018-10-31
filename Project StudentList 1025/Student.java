@@ -14,26 +14,26 @@ public class Student{
     public String lastName = "";
     public int stuNumber; 
     public double gpa;
-    
+
     // +++++++++++++++++++++++++++++++++++++++++++++++  setters
-    public void setFirstName(String first){
-        firstName = first; // sets the students first name
+    public void setFirstName(String name){
+        firstName = name;
     }
 
-    public void setMiddleName(String middle){
-        middleName = middle; // sets the students middle name
+    public void setMiddleName(String name){
+        middleName = name;
     }
 
-    public void setlastName(String last){
-        lastName = last; // sets the students last name
-    }
-
-    public void setstuNumber(int number){
-        stuNumber = number; // sets the students number 
+    public void setlastName(String name){
+        lastName = name;
     }
 
     public void setgpa(double GPA){
         gpa = GPA; // sets the students gpa
+    }
+
+    public void setstuNumber(int number){
+        stuNumber = number; // sets the students number 
     }
 
     //+++++++++++++++++++++++++++++++++++++++++++++++++  getters
@@ -41,11 +41,11 @@ public class Student{
         //method should get the names of Students in format last name, firstName middleName
         return lastName + "," + firstName + " " + middleName;
     }
-    
+
     public String getLastName(){
         return lastName;
     }
-    
+
     public double getgpa(){
         //gets the student's gpa
         return gpa;
