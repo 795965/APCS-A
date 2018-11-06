@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GridTester
+comment1.params=
+comment1.target=void\ loadArray()
+comment2.params=testArray
+comment2.target=int\ sumAll(int[])
+numComments=3
