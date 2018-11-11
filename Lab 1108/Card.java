@@ -7,29 +7,20 @@
  */
 public class Card
 {
-    public static int Spades = 0;
-    public static int Hearts = 1;
-    public static int Diamonds = 2;
-    public static int Clubs = 3;
-
-    
-    public static int Ace = 1;
-    public static int Jack = 11;
-    public static int Queen = 12;
-    public static int King = 13;
-
-    public Card(int value, int Suit){
-        value = value;
-        suit = Suit;
+    //instance variable
+    int rank; //int of numbers
+    String suit; //string of suit
+    public Card(int rk, String s){ //card object has values suit and rank
+        int rank = rk;
+        String suit = s;
     }
-
-    public int getSuit(){
+    
+    public int getRank(){//getter for rank
+        return rank;
+    }
+    
+    public String getSuit(){//getter for suit
         return suit;
     }
-
-    public int getValue(){
-        return value;
-    }
-
 }
 

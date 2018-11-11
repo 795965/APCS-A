@@ -8,9 +8,8 @@
 public class CardRunner
 {
     public static void Game(){
-        CardRunner deckOne = new CardRunner();
-        deckOne.//();
-        System.out.println(deckOne.getGame());
+        Game game = new Game(); //creates new game object
+        
     }
     }
 

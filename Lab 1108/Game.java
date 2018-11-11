@@ -7,15 +7,8 @@
  */
 public class Game
 {
-    public static void Deck(){
-        //type [] varname;
-        //varname = new type [length];
-        
-        Card [] deckArray;
-        deckArray = new Card [52];
-        
-        Card [] handArray;
-        handArray = new Card [5];
-        
+    public Game(){
+        Deck deck = new Deck(); //creates new deck object
+        Hand hand = new Hand(deck); //creates a new hand
     }
 }

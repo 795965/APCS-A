@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Hand
+comment1.params=deck
+comment1.target=Hand(Deck)
+comment2.params=
+comment2.target=boolean\ sameSuit()
+comment3.params=
+comment3.target=int\ onePair()
+numComments=4
