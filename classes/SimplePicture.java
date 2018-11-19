@@ -71,7 +71,7 @@ public class SimplePicture implements DigitalPicture
    load(fileName);
    
  }
- 
+
  /**
   * A constructor that takes the width and height desired for a picture and
   * creates a buffered image of that size.  This constructor doesn't 
@@ -87,7 +87,7 @@ public class SimplePicture implements DigitalPicture
    extension = "jpg";
    setAllPixelsToAColor(Color.white);
  }
- 
+
  /**
   * A constructor that takes the width and height desired for a picture and
   * creates a buffered image of that size.  It also takes the

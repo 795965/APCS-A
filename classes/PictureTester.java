@@ -17,6 +17,15 @@ public class PictureTester
     beach.explore();
   }
   
+  /** Method to test keepOnlyBlue */
+   public static void keepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.OnlyBlue();
+    beach.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -25,7 +34,22 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
-  
+  /** Method to test mirrorVerticalRightToLeft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+}
+        // /** Method to test mirrorHorizontal */
+          // public static void testHorizontal()
+          // {
+            // Picture caterpillar = new Picture("caterpillar.jpg");
+            // caterpillar.explore();
+            // caterpillar.mirrorHorizontal();
+            // caterpillar.explore();
+    }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -51,6 +75,25 @@ public class PictureTester
     swan.explore();
   }
   
+  /** Method to test Negate */
+  public static void Negate(){
+    Picture beach = new Picture("beach.jpg");
+    beach.Negate();
+    beach.explore();
+    
+    }
+    //method to test greyscale
+    public static void greyscale(){
+    Picture beach = new Picture("beach.jpg");
+    beach.greyscale();
+    beach.explore();
+    }
+     public static void fixUnderwater(){
+         Picture beach = new Picture("water.jpg");
+    beach.fixUnderwater();
+    beach.explore();
+        }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,12 +101,12 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //testZeroBlue();
+    //onlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
+    //Negate();
+    //greyscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
