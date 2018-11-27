@@ -20,10 +20,28 @@ public class Cell
     /**
      * ++++++++++++++  methods
      */
-    
-    public void addNeighbors(){
-        
+
+    public int getSum(){ //method to add all neighbors for getGreatest
+        int sum = 0; //intializes sum variable
+        for(int r= 0; r< neighbors.length; r++){ //for loop to traverse neighbors
+            if(neighbors[r] != null){ //if there is a neghbor, add the integer value to the sum
+                sum += neighbors[r].getInt();
+            }
+        }
+        return sum;
     }
+    public void addNeighbors(Cell cell){ //extra method to make loadNeighbors easier
+        for(int r= 0; r< neighbors.length; r++){ //traverses neighbors
+            if(neighbors[r] == null){ //if there is no neighbor, that is the end of a row or column
+                neighbors[r] = cell;
+                r= neighbors.length;
+            }
+        }
+
+    }
+
+   
+
     public int getInt(){
         return x;
     }
