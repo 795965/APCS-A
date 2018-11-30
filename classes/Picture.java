@@ -97,6 +97,19 @@ public class Picture extends SimplePicture
             }
         }
     }
+    /** Method to keep only Blue */
+    public void OnlyBlue()
+    {
+        Pixel[][] pixels = this.getPixels2D();
+        for (Pixel[] rowArray : pixels)
+        {
+            for (Pixel pixelObj : rowArray)
+            {
+                pixelObj.setRed(0);
+                pixelObj.setGreen(0);
+            }
+        }
+    }
 
     /** Method that mirrors the picture around a 
      * vertical mirror in the center of the picture
@@ -118,6 +131,46 @@ public class Picture extends SimplePicture
         } 
     }
 
+    //method that mirrors picture around mirror vertically from right to left
+    /** Method that mirrors the picture around a 
+     * vertical mirror in the center of the picture
+     * from left to right */
+    public void mirrorVerticalRightToLeft()
+    {
+        Pixel[][] pixels = this.getPixels2D();
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int width = pixels[0].length;
+        for (int row = 0; row < pixels.length; row++)
+        {
+            for (int col = 0; col < width / 2; col++)
+            {
+                leftPixel = pixels[row][col];
+                rightPixel = pixels[row][width - 1 - col];
+                leftPixel.setColor(rightPixel.getColor());
+            }
+        } 
+    }
+    //mirrors viretically top to bottom
+    /** Method that mirrors the picture around a 
+     * vertical mirror in the center of the picture
+     * from left to right */
+        // public void mirrorHorizontal()
+        // {
+            // Pixel[][] pixels = this.getPixels2D();
+            // Pixel topPixel = null;
+            // Pixel bottomPixel = null;
+            // int height = pixels[].length;
+            // for (int row = 0; row < pixels.length; row++)
+            // {
+                // for (int col = 0; col < height / 2; col++)
+                // {
+                    // topPixel = pixels[row][col];
+                   // bottomPixel = pixels[row][height - 1 - col];
+                    // bottomPixel.setColor(topPixel.getColor());
+                // }
+            // } 
+        // }
     /** Mirror just part of a picture of a temple */
     public void mirrorTemple()
     {
@@ -178,9 +231,9 @@ public class Picture extends SimplePicture
     {
         Picture flower1 = new Picture("flower1.jpg");
         Picture flower2 = new Picture("flower2.jpg");
-        this.copy(flower1,0,0);
-        this.copy(flower2,100,0);
-        this.copy(flower1,200,0);
+        this.copy(flower1,0,50);
+        this.copy(flower2,100,100);
+        this.copy(flower1,300,0);
         Picture flowerNoBlue = new Picture(flower2);
         flowerNoBlue.zeroBlue();
         this.copy(flowerNoBlue,300,0);
@@ -194,16 +247,19 @@ public class Picture extends SimplePicture
     public void myCollage()
     {
         Picture ZiggyJulie = new Picture("ZiggyJulie.jpg");
-        Picture ZSF = new Picture("SplitsStreetFair.jpg");
+        Picture MB = new Picture("MusicBox.jpg");
+        Picture SSF = new Picture("SplitsStreetFair.jpg");
         this.copy(ZiggyJulie,0,0);
-        this.copy(ZSF,100,0);
+        this.copy(SSF,100,0);
         this.copy(ZiggyJulie,200,0);
-        Picture flowerNoBlue = new Picture(ZSF);
+        Picture flowerNoBlue = new Picture(SSF);
         flowerNoBlue.zeroBlue();
         this.copy(flowerNoBlue,300,0);
         this.copy(ZiggyJulie,400,0);
-        this.copy(ZSF,500,0);
+        this.copy(SSF,500,0);
         this.mirrorVertical();
+        Picture SSf1NoGreen = new Picture (SSF);
+        this.copy(MB, 500, 400);
         this.write("collage.jpg");
     }
 
@@ -212,28 +268,40 @@ public class Picture extends SimplePicture
      */
     public void edgeDetection(int edgeDist)
     {
-        Pixel leftPixel = null;
+        //variables for left, right, top and bottom
+        Pixel leftPixel = null; 
         Pixel rightPixel = null;
         Pixel topPixel = null;
         Pixel bottomPixel = null;
+        //variable for the pixels arraty
         Pixel[][] pixels = this.getPixels2D();
+        //variables for the right color and bottom color because you need to use them to get edges
         Color rightColor = null;
         Color bottomColor = null;
+        //nested for loop to traverse pixels 2D array
         for (int row = 0; row < pixels.length; row++)
         {
             for (int col = 0; col < pixels[0].length-1; col++)
             {
+                //find each edge by setting left right top and bottom pixels to their row and column (where bottom is the next column over and right is the next column over
                 leftPixel = pixels[row][col];
                 rightPixel = pixels[row][col+1];
-                topPixel = pixels[row][col];
-                bottomPixel = pixels[row+1][col];
+                topPixel=pixels[row][col];
+                bottomPixel = pixels[row][col+1];
                 rightColor = rightPixel.getColor();
-                if (leftPixel.colorDistance(rightPixel.getColor()) > edgeDist ||
-                topPixel.colorDistance(bottomPixel.getColor()) > edgeDist)
+                bottomColor = bottomPixel.getColor();
+                //if statement to set the edge to black
+                    //if the right color has a large change from the left color or the top has a large change from the bottom, set it to black
+                if(leftPixel.colorDistance(rightColor) > edgeDist || topPixel.colorDistance(bottomColor) > edgeDist){
                     leftPixel.setColor(Color.BLACK);
-                else
+                    topPixel.setColor(Color.BLACK);
+                // if the change is not great, set the color to white
+                }else{
                     leftPixel.setColor(Color.WHITE);
+                    topPixel.setColor(Color.WHITE);
+                }
             }
+
         }
     }
 
@@ -242,10 +310,10 @@ public class Picture extends SimplePicture
      */
     public static void main(String[] args) 
     {
-        Picture beach = new Picture("beach.jpg");
-        beach.explore();
-        beach.zeroBlue();
-        beach.explore();
+        Picture ZiggyJulie = new Picture("ZiggyJulie.jpg");
+        ZiggyJulie.explore();
+        ZiggyJulie.zeroBlue();
+        ZiggyJulie.explore();
     }
 
 } // this } is the end of class Picture, put all new methods before this

@@ -11,21 +11,45 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("SplitsStreetFair.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
   }
+  /** Method to test keepOnlyBlue */
+   public static void keepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.OnlyBlue();
+    beach.explore();
+  }
+  
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("ZiggyJulie.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
-  
+  /** Method to test mirrorVerticalRightToLeft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+}
+// /** Method to test mirrorHorizontal */
+          // public static void testHorizontal()
+          // {
+            // Picture caterpillar = new Picture("caterpillar.jpg");
+            // caterpillar.explore();
+            // caterpillar.mirrorHorizontal();
+            // caterpillar.explore();
+    
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -53,7 +77,7 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("ZiggyJulie.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
