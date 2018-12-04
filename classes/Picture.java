@@ -273,7 +273,7 @@ public class Picture extends SimplePicture
         Pixel rightPixel = null;
         Pixel topPixel = null;
         Pixel bottomPixel = null;
-        //variable for the pixels arraty
+        //variable for the pixels array
         Pixel[][] pixels = this.getPixels2D();
         //variables for the right color and bottom color because you need to use them to get edges
         Color rightColor = null;
@@ -303,6 +303,51 @@ public class Picture extends SimplePicture
             }
 
         }
+    }
+    /* Method for edge detection Ziggy Style*/
+    public void myEdgeDetection(int edgeDist){
+        //variables to find each edge
+        //top, bottom, right, left
+        Pixel top = null;
+        Pixel bottom = null;
+        Pixel left = null; 
+        Pixel right = null;
+        Pixel[][] pixels = this.getPixels2D();
+        
+        Color leftColor = null;
+        Color rightColor = null;
+        Color topColor =  null;
+        Color bottomColor = null;
+        
+        //find difference in color between two pixels
+        //nested for loop to traverse pixels 2D array
+        for (int row = 0; row < pixels.length; row++)
+        {
+            for (int col = 0; col < pixels[0].length-1; col++)
+            {
+                //find each edge by setting left right top and bottom pixels to their row and column (where bottom is the next column over and right is the next column over
+                left = pixels[row][col];
+                right = pixels[row][col+1];
+                top=pixels[row][col];
+                bottom = pixels[row][col+1];
+                rightColor = right.getColor();
+                bottomColor = bottom.getColor();
+                //if statement to set the edge to black
+                    //if the right color has a large change from the left color or the top has a large change from the bottom, set it to black
+                if(left.colorDistance(rightColor) > edgeDist || top.colorDistance(bottomColor) > edgeDist){
+                    left.setColor(Color.BLACK);
+                    top.setColor(Color.BLACK);
+                // if the change is not great, set the color to white
+                }else{
+                    left.setColor(Color.WHITE);
+                    top.setColor(Color.WHITE);
+                }
+            }
+
+        }
+        //if difference is big, set top to white and bottom to black
+        //if difference is big, set left to white and righ to black
+        //set edges of picture to black
     }
 
     /* Main method for testing - each class in Java can have a main 
