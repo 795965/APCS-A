@@ -171,6 +171,7 @@ public class Picture extends SimplePicture
                 // }
             // } 
         // }
+    //Activity 7
     /** Mirror just part of a picture of a temple */
     public void mirrorTemple()
     {
@@ -194,7 +195,7 @@ public class Picture extends SimplePicture
             }
         }
     }
-
+    //Activity 8
     /** copy from the passed fromPic to the
      * specified startRow and startCol in the
      * current picture
@@ -209,12 +210,12 @@ public class Picture extends SimplePicture
         Pixel toPixel = null;
         Pixel[][] toPixels = this.getPixels2D();
         Pixel[][] fromPixels = fromPic.getPixels2D();
-        for (int fromRow = 0, toRow = startRow; 
+        for (int fromRow = 250, toRow = startRow; 
         fromRow < fromPixels.length &&
         toRow < toPixels.length; 
         fromRow++, toRow++)
         {
-            for (int fromCol = 0, toCol = startCol; 
+            for (int fromCol = 250, toCol = startCol; 
             fromCol < fromPixels[0].length &&
             toCol < toPixels[0].length;  
             fromCol++, toCol++)
@@ -225,7 +226,8 @@ public class Picture extends SimplePicture
             }
         }   
     }
-
+    
+    //Activity 8
     /** Method to create a collage of several pictures */
     public void createCollage()
     {
@@ -259,7 +261,7 @@ public class Picture extends SimplePicture
         this.copy(SSF,500,0);
         this.mirrorVertical();
         Picture SSf1NoGreen = new Picture (SSF);
-        this.copy(MB, 500, 400);
+        this.copy(MB, 35, 400);
         this.write("collage.jpg");
     }
 
@@ -278,6 +280,7 @@ public class Picture extends SimplePicture
         //variables for the right color and bottom color because you need to use them to get edges
         Color rightColor = null;
         Color bottomColor = null;
+        
         //nested for loop to traverse pixels 2D array
         for (int row = 0; row < pixels.length; row++)
         {
@@ -286,19 +289,19 @@ public class Picture extends SimplePicture
                 //find each edge by setting left right top and bottom pixels to their row and column (where bottom is the next column over and right is the next column over
                 leftPixel = pixels[row][col];
                 rightPixel = pixels[row][col+1];
-                topPixel=pixels[row][col];
                 bottomPixel = pixels[row][col+1];
                 rightColor = rightPixel.getColor();
                 bottomColor = bottomPixel.getColor();
+                
                 //if statement to set the edge to black
                     //if the right color has a large change from the left color or the top has a large change from the bottom, set it to black
-                if(leftPixel.colorDistance(rightColor) > edgeDist || topPixel.colorDistance(bottomColor) > edgeDist){
-                    leftPixel.setColor(Color.BLACK);
-                    topPixel.setColor(Color.BLACK);
+                if(leftPixel.colorDistance(rightColor) > edgeDist || leftPixel.colorDistance(bottomColor) > edgeDist){
+                    Color color = new Color (0, 225, 225);
+                    leftPixel.setColor(color);
+                    //leftPixel.setColor(Color.BLACK);
                 // if the change is not great, set the color to white
                 }else{
                     leftPixel.setColor(Color.WHITE);
-                    topPixel.setColor(Color.WHITE);
                 }
             }
 
@@ -335,12 +338,13 @@ public class Picture extends SimplePicture
                 //if statement to set the edge to black
                     //if the right color has a large change from the left color or the top has a large change from the bottom, set it to black
                 if(left.colorDistance(rightColor) > edgeDist || top.colorDistance(bottomColor) > edgeDist){
-                    left.setColor(Color.BLACK);
-                    top.setColor(Color.BLACK);
+                    Color color = new Color (0, 225, 255);
+                    left.setColor(color);
+
                 // if the change is not great, set the color to white
                 }else{
-                    left.setColor(Color.WHITE);
-                    top.setColor(Color.WHITE);
+                    left.setColor(Color.BLACK);
+                    top.setColor(Color.BLACK);
                 }
             }
 
@@ -348,6 +352,42 @@ public class Picture extends SimplePicture
         //if difference is big, set top to white and bottom to black
         //if difference is big, set left to white and righ to black
         //set edges of picture to black
+    }
+    public void colorEdge(int edgeDist){
+        //variables for left, right, top and bottom
+        Pixel leftPixel = null; 
+        Pixel rightPixel = null;
+        //variable for the pixels array
+        Pixel[][] pixels = this.getPixels2D();
+        //variables for the right color and bottom color because you need to use them to get edges
+        Color rightColor = null;
+        Color bottomColor = null;
+        
+        //nested for loop to traverse pixels 2D array
+        for (int row = 0; row < pixels.length; row++)
+        {
+            for (int col = 0; col < pixels[0].length-1; col++)
+            {
+                //find each edge by setting left right top and bottom pixels to their row and column (where bottom is the next column over and right is the next column over
+                leftPixel = pixels[row][col];
+                rightPixel = pixels[row][col+1];
+ 
+                rightColor = rightPixel.getColor();
+
+                //if statement to set the edge to black
+                    //if the right color has a large change from the left color or the top has a large change from the bottom, set it to black
+                if(leftPixel.colorDistance(rightColor) > edgeDist || leftPixel.colorDistance(bottomColor) > edgeDist){
+                   //variable to make colors
+                    Color color = new Color ((int)(Math.random()*100)+1, (int)(Math.random()*100)+1, (int)(Math.random()*100)+1);
+                    //make the edge in color
+                    leftPixel.setColor(color);
+                // if the change is not great, set the color to white
+                }else{
+                    leftPixel.setColor(Color.BLACK);
+                }
+            }
+
+        }
     }
 
     /* Main method for testing - each class in Java can have a main 
