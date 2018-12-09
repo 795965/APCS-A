@@ -1,10 +1,9 @@
 #BlueJ class context
 comment0.target=PrimeNumbers
-comment0.text=\n\ Write\ a\ description\ of\ class\ PrimeNumbers\ here.\n\n\ @author\ (your\ name)\n\ @version\ (a\ version\ number\ or\ a\ date)\n
-comment1.params=
-comment1.target=PrimeNumbers()
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ PrimeNumbers\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\n\ @param\ \ y\ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ the\ sum\ of\ x\ and\ y\n
-numComments=3
+comment1.params=n
+comment1.target=void\ setListToNumbers(int)
+comment2.params=n
+comment2.target=void\ addNumberToList(int)
+comment3.params=n1\ n2
+comment3.target=void\ addNumbers(java.util.ArrayList,\ java.util.ArrayList)
+numComments=4
