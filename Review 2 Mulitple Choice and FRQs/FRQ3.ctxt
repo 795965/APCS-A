@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=FRQ3
+comment0.text=\n\ Given\ String\ return\ random\ response\n\n\ @author\ (Ziggy)\n\ @version\ (12/17)\n
+comment1.params=
+comment1.target=java.lang.String\ getRandomResponse()
+numComments=2

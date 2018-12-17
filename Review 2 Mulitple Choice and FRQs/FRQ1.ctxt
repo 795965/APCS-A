@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=FRQ1
+comment0.text=\n\ Create\ Getters\ and\ Setters\ \n\n\ @author\ (Ziggy\ Sheynin)\n\ @version\ (12/17/18)\n
+comment1.params=GPA
+comment1.target=void\ setGPA(double)
+comment2.params=GPA
+comment2.target=double\ getGPA(double)
+numComments=3
